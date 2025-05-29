@@ -1,0 +1,73 @@
+/* Container holds sidebar + product grid */
+.product-list-wrapper {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  min-height: calc(100vh - 80px);
+}
+
+/* Sidebar on left for filter + search */
+.sidebar {
+  flex: 0 0 220px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sidebar h3 {
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* Category dropdown styling */
+.category-select {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 24px;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.category-select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Search input styling */
+.search-input {
+  width: 90%;
+  padding: 8px 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Product list grid */
+.product-list {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+/* Loading and error messages */
+.loading,
+.error {
+  font-size: 1.2rem;
+  color: #666;
+  padding: 20px;
+}
